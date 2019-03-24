@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="《Java面试题(一)》如下代码的运行结果public static void main(String args[]){     int i = 1;     i = i++;     int j = i++;     int k = i + ++i * i++;     System.out.println(&amp;quot;i=&amp;quot; + i);     System.out.println(">
+<meta name="description" content="《Java面试题(一)》如下代码的运行结果123456789public static void main(String args[])&amp;#123;	int i = 1;	i = i++;	int j = i++;	int k = i + ++i * i++;	System.out.println(&quot;i=&quot; + i);	System.out.println(&quot;j=&quot; + j);	System.ou">
 <meta name="keywords" content="面试题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试题（一）">
 <meta property="og:url" content="http://yoursite.com/2018/12/24/Java面试题（一）/index.html">
 <meta property="og:site_name" content="故人辞我去">
-<meta property="og:description" content="《Java面试题(一)》如下代码的运行结果public static void main(String args[]){     int i = 1;     i = i++;     int j = i++;     int k = i + ++i * i++;     System.out.println(&amp;quot;i=&amp;quot; + i);     System.out.println(">
+<meta property="og:description" content="《Java面试题(一)》如下代码的运行结果123456789public static void main(String args[])&amp;#123;	int i = 1;	i = i++;	int j = i++;	int k = i + ++i * i++;	System.out.println(&quot;i=&quot; + i);	System.out.println(&quot;j=&quot; + j);	System.ou">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-24T13:30:41.930Z">
+<meta property="og:updated_time" content="2019-03-24T07:05:35.867Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试题（一）">
-<meta name="twitter:description" content="《Java面试题(一)》如下代码的运行结果public static void main(String args[]){     int i = 1;     i = i++;     int j = i++;     int k = i + ++i * i++;     System.out.println(&amp;quot;i=&amp;quot; + i);     System.out.println(">
+<meta name="twitter:description" content="《Java面试题(一)》如下代码的运行结果123456789public static void main(String args[])&amp;#123;	int i = 1;	i = i++;	int j = i++;	int k = i + ++i * i++;	System.out.println(&quot;i=&quot; + i);	System.out.println(&quot;j=&quot; + j);	System.ou">
 
 
 
@@ -330,20 +330,9 @@
       
 
       
-        <h1 id="《Java面试题-一-》"><a href="#《Java面试题-一-》" class="headerlink" title="《Java面试题(一)》"></a><center>《Java面试题(一)》</center></h1><h2 id="如下代码的运行结果"><a href="#如下代码的运行结果" class="headerlink" title="如下代码的运行结果"></a>如下代码的运行结果</h2><pre><code>public static void main(String args[]){
-    int i = 1;
-    i = i++;
-    int j = i++;
-    int k = i + ++i * i++;
-    System.out.println(&quot;i=&quot; + i);
-    System.out.println(&quot;j=&quot; + j);
-    System.out.pringln(&quot;k = &quot; + k);
-}
-</code></pre><p>这是一道关于自增变量的面试题，运行结果为：</p>
-<pre><code>i = 4；
-j = 2；
-k = 11;
-</code></pre><p>分析如下：</p>
+        <h1 id="《Java面试题-一-》"><a href="#《Java面试题-一-》" class="headerlink" title="《Java面试题(一)》"></a><center>《Java面试题(一)》</center></h1><h2 id="如下代码的运行结果"><a href="#如下代码的运行结果" class="headerlink" title="如下代码的运行结果"></a>如下代码的运行结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	i = i++;</span><br><span class="line">	<span class="keyword">int</span> j = i++;</span><br><span class="line">	<span class="keyword">int</span> k = i + ++i * i++;</span><br><span class="line">	System.out.println(<span class="string">"i="</span> + i);</span><br><span class="line">	System.out.println(<span class="string">"j="</span> + j);</span><br><span class="line">	System.out.pringln(<span class="string">"k = "</span> + k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是一道关于自增变量的面试题，运行结果为：<br>​<br>    i = 4；<br>    j = 2；<br>    k = 11;</p>
+<p>分析如下：</p>
 <pre><code>首先看 i = i++ 
 &quot;=&quot; 右边的先进行计算，赋值运算最后执行
 因为&quot;++&quot;在右边，所以先把i的值压入操作数栈，此时计算i++，i由1变为2，
@@ -354,7 +343,8 @@ k = 11;
 第三行：iload_1 [i] 将变量中的常量值压入操作数栈,iinc 1 1 ++i进行自加,istore_1 将操作数栈中的值赋值给变量j，所以i变为了2，j被操作数栈中的值赋成了1；
 第四行：iload_1 [i]（i = 2） 将变量i中的常量值压入操作数栈，接着执行“++i”,iinc 1 1,i进行自加,然后这个值并未被赋与其它变量，再次读入i的值 iload_1 [i]（i = 3），将变量i中的常量值压入操作数栈，再执行“i++”，读入i的值 iload_1 [i]（i = 3），iinc 1 1,i进行自加，最终 i= 3，参与运算的值分别为 2 + 3 * 3 
 k最终为：11
-</code></pre>
+</code></pre><p>​    </p>
+
       
     </div>
     
