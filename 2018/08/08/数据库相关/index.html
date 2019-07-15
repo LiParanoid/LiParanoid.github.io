@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="数据库,">
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="Test">
+<meta name="description" content="数据库的概念数据库概述 什么是数据库 ​        数据库就是存储数据的仓库，它的本质是一个文件系统，数据按照特定的格式将数据存储起来，用户可以对数据库中的数据进行增加，修改，删除以及查询的操作。  什么是数据库管理系统 ​        数据库管理系统：指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理">
+<meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库相关">
 <meta property="og:url" content="http://yoursite.com/2018/08/08/数据库相关/index.html">
 <meta property="og:site_name" content="故人辞我去">
-<meta property="og:description" content="Test">
+<meta property="og:description" content="数据库的概念数据库概述 什么是数据库 ​        数据库就是存储数据的仓库，它的本质是一个文件系统，数据按照特定的格式将数据存储起来，用户可以对数据库中的数据进行增加，修改，删除以及查询的操作。  什么是数据库管理系统 ​        数据库管理系统：指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-15T13:33:15.886Z">
+<meta property="og:image" content="http://yoursite.com/images/database/db1.png">
+<meta property="og:updated_time" content="2019-07-15T14:13:20.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库相关">
-<meta name="twitter:description" content="Test">
+<meta name="twitter:description" content="数据库的概念数据库概述 什么是数据库 ​        数据库就是存储数据的仓库，它的本质是一个文件系统，数据按照特定的格式将数据存储起来，用户可以对数据库中的数据进行增加，修改，删除以及查询的操作。  什么是数据库管理系统 ​        数据库管理系统：指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理">
+<meta name="twitter:image" content="http://yoursite.com/images/database/db1.png">
 
 
 
@@ -329,7 +332,44 @@
       
 
       
-        <p>Test</p>
+        <h2 id="数据库的概念"><a href="#数据库的概念" class="headerlink" title="数据库的概念"></a>数据库的概念</h2><h3 id="数据库概述"><a href="#数据库概述" class="headerlink" title="数据库概述"></a>数据库概述</h3><ul>
+<li><p>什么是数据库</p>
+<p>​        数据库就是存储数据的仓库，它的本质是一个文件系统，数据按照特定的格式将数据存储起来，用户可以对数据库中的数据进行增加，修改，删除以及查询的操作。</p>
+</li>
+<li><p>什么是数据库管理系统</p>
+<p>​        数据库管理系统：指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理系统访问数据库中表内的数据。</p>
+</li>
+<li><p>常见的数据库管理系统</p>
+<p>MYSQL     ：开源免费的数据库，小型的数据库.已经被Oracle收购了.MySQL6.x版本也开始收费。</p>
+<p>Oracle      ：收费的大型数据库，Oracle公司的产品。Oracle收购SUN公司，收购MYSQL。</p>
+<p>DB2          ：IBM公司的数据库产品,收费的。常应用在银行系统中.</p>
+<p>SQLServer：MicroSoft 公司收费的中型的数据库。C#、.net等语言常使用。</p>
+<p>SyBase     ：已经淡出历史舞台。提供了一个非常专业数据建模的工具PowerDesigner。</p>
+<p>SQLite      : 嵌入式的小型数据库，应用在手机端。</p>
+</li>
+<li><p>数据库与数据库管理系统的关系</p>
+<p>客户端访问——》数据库管理操作系统——》多个数据库——》多个数据库中的多个表</p>
+</li>
+</ul>
+<h3 id="数据库表"><a href="#数据库表" class="headerlink" title="数据库表"></a>数据库表</h3><p>​        数据库中以表为组织单位存储数据</p>
+<p>​        表类似于Java的类，每个字段都有对应的数据类型</p>
+<p>​        用Java来与关系型数据库对比，大概对应关系为</p>
+<p>​        类——表</p>
+<p>​        类中的属性——表中字段</p>
+<p>​        对象——记录</p>
+<h3 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h3><p>​        数据库有自己的语言，我们要与数据库交互时，需要使用到数据库认识的语言SQL语句</p>
+<p>​        SQL 指的是：结构化查询语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新、和管理关系数据库系统</p>
+<p>​        创建数据库、创建数据表、向数据表中添加一条条数据信息均需要使用SQL语句</p>
+<h3 id="数据库操作：database"><a href="#数据库操作：database" class="headerlink" title="数据库操作：database"></a>数据库操作：database</h3><ul>
+<li><p>创建数据库</p>
+<p>格式：create database 数据库名</p>
+<p>​            create database 数据库名 character set 字符集</p>
+<blockquote>
+<p>utf8mb4编码是utf8编码的超集，兼容utf8，并且能存储4字节的表情字符。<br>采用utf8mb4编码的好处是：存储与获取数据的时候，不用再考虑表情字符的编码与解码问题。</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/images/database/db1.png" alt=""></p>
 
       
     </div>
@@ -344,6 +384,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+        </div>
       
 
       
@@ -414,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -445,7 +500,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -492,6 +547,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的概念"><span class="nav-number">1.</span> <span class="nav-text">数据库的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库概述"><span class="nav-number">1.1.</span> <span class="nav-text">数据库概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库表"><span class="nav-number">1.2.</span> <span class="nav-text">数据库表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL语句"><span class="nav-number">1.3.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库操作：database"><span class="nav-number">1.4.</span> <span class="nav-text">数据库操作：database</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
