@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://yoursite.com/images/database/db5.png">
 <meta property="og:image" content="http://yoursite.com/images/database/db6.png">
 <meta property="og:image" content="http://yoursite.com/images/database/db7.png">
-<meta property="og:updated_time" content="2019-07-15T14:32:28.081Z">
+<meta property="og:updated_time" content="2019-07-15T15:11:02.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库相关">
 <meta name="twitter:description" content="数据库的概念数据库概述 什么是数据库 ​        数据库就是存储数据的仓库，它的本质是一个文件系统，数据按照特定的格式将数据存储起来，用户可以对数据库中的数据进行增加，修改，删除以及查询的操作。  什么是数据库管理系统 ​        数据库管理系统：指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理">
@@ -368,42 +368,55 @@
 <p>​        创建数据库、创建数据表、向数据表中添加一条条数据信息均需要使用SQL语句</p>
 <h3 id="数据库操作：database"><a href="#数据库操作：database" class="headerlink" title="数据库操作：database"></a>数据库操作：database</h3><ul>
 <li><p>创建数据库</p>
-<p>格式：create database 数据库名</p>
-<p>​            create database 数据库名 character set 字符集</p>
+<p>​    格式：create database 数据库名</p>
+<p>​                create database 数据库名 character set 字符集</p>
 <blockquote>
 <p>utf8mb4编码是utf8编码的超集，兼容utf8，并且能存储4字节的表情字符。<br>采用utf8mb4编码的好处是：存储与获取数据的时候，不用再考虑表情字符的编码与解码问题。</p>
 </blockquote>
-</li>
-</ul>
 <p><img src="/images/database/db1.png" alt=""></p>
 <p><img src="/images/database/db2.png" alt=""></p>
-<ul>
+</li>
 <li><p>查看数据库</p>
 <p>查看数据库MySQL服务器中的所有的数据库</p>
 <blockquote>
 <p>show databases</p>
 </blockquote>
 <p><img src="/images/database/db3.png" alt=""></p>
-<p>查看某个数据库的定义的信息</p>
+</li>
+<li><p>查看某个数据库的定义的信息</p>
 <blockquote>
 <p>show create database 数据库名</p>
 </blockquote>
 <p><img src="/images/database/db4.png" alt=""></p>
-<p>删除数据库</p>
+</li>
+<li><p>删除数据库</p>
 <blockquote>
 <p>drop database 数据库名</p>
 </blockquote>
 <p><img src="/images/database/db5.png" alt=""></p>
-<p>切换数据库</p>
+</li>
+<li><p>切换数据库</p>
 <blockquote>
 <p>use 数据库名</p>
 </blockquote>
 <p><img src="/images/database/db6.png" alt=""></p>
-<p>查看正在使用的数据库</p>
+</li>
+<li><p>查看正在使用的数据库</p>
 <blockquote>
 <p>select database()</p>
 </blockquote>
 <p><img src="/images/database/db7.png" alt=""></p>
+</li>
+</ul>
+<h3 id="表结构相关语句"><a href="#表结构相关语句" class="headerlink" title="表结构相关语句"></a>表结构相关语句</h3><ul>
+<li><p>创建表</p>
+<blockquote>
+<p>create table 表名 (</p>
+<p>​        字段名    类型(长度)    约束,</p>
+<p>​        字段名    类型(长度)    约束</p>
+<p>​        … … … …</p>
+<p>)</p>
+</blockquote>
 </li>
 </ul>
 
@@ -593,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的概念"><span class="nav-number">1.</span> <span class="nav-text">数据库的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库概述"><span class="nav-number">1.1.</span> <span class="nav-text">数据库概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库表"><span class="nav-number">1.2.</span> <span class="nav-text">数据库表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL语句"><span class="nav-number">1.3.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库操作：database"><span class="nav-number">1.4.</span> <span class="nav-text">数据库操作：database</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的概念"><span class="nav-number">1.</span> <span class="nav-text">数据库的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库概述"><span class="nav-number">1.1.</span> <span class="nav-text">数据库概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库表"><span class="nav-number">1.2.</span> <span class="nav-text">数据库表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL语句"><span class="nav-number">1.3.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库操作：database"><span class="nav-number">1.4.</span> <span class="nav-text">数据库操作：database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表结构相关语句"><span class="nav-number">1.5.</span> <span class="nav-text">表结构相关语句</span></a></li></ol></li></ol></div>
             
 
           </div>
