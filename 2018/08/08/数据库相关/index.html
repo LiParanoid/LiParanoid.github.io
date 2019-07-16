@@ -94,7 +94,19 @@
 <meta property="og:image" content="http://yoursite.com/images/database/db5.png">
 <meta property="og:image" content="http://yoursite.com/images/database/db6.png">
 <meta property="og:image" content="http://yoursite.com/images/database/db7.png">
-<meta property="og:updated_time" content="2019-07-15T15:11:02.513Z">
+<meta property="og:image" content="http://yoursite.com/images/database/db8.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db9.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db10.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db11.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db12.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db13.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db14.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db15.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db16.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db17.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db18.png">
+<meta property="og:image" content="http://yoursite.com/images/database/db19.png">
+<meta property="og:updated_time" content="2019-07-16T14:15:44.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库相关">
 <meta name="twitter:description" content="数据库的概念数据库概述 什么是数据库 ​        数据库就是存储数据的仓库，它的本质是一个文件系统，数据按照特定的格式将数据存储起来，用户可以对数据库中的数据进行增加，修改，删除以及查询的操作。  什么是数据库管理系统 ​        数据库管理系统：指一种操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理">
@@ -417,6 +429,95 @@
 <p>​        … … … …</p>
 <p>)</p>
 </blockquote>
+<p><img src="/images/database/db8.png" alt=""></p>
+</li>
+<li><p>主键约束</p>
+<p>主键是用于标识当前记录的字段。它的特点是非空，唯一。在开发中一般情况下主键是不具备任何含义，只是用于标识当前记录</p>
+<p>格式：</p>
+<ol>
+<li><p>在创建表时创建主键，在字段后面加上 primary key</p>
+<blockquote>
+<p>create table 表名(</p>
+<p>​        id int primary key,</p>
+<p>​        … … … …</p>
+<p>)</p>
+</blockquote>
+</li>
+<li><p>在创建表时创建主键，在表创建的最后来指定主键</p>
+<blockquote>
+<p>create table 表名(</p>
+<p>​        id int,</p>
+<p>​        … … … …,</p>
+<p>​        primary key(id)</p>
+<p>)</p>
+</blockquote>
+</li>
+<li><p>删除主键</p>
+<blockquote>
+<p>alter table 表名 drop primary key;</p>
+</blockquote>
+<p><img src="/images/database/db9.png" alt=""></p>
+</li>
+</ol>
+</li>
+<li><p>查看表</p>
+<ul>
+<li><p>查看数据库中的所有表</p>
+<blockquote>
+<p>show tables</p>
+</blockquote>
+</li>
+<li><p>查看表结构</p>
+<blockquote>
+<p>desc 表名</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>删除表</p>
+<blockquote>
+<p>drop table 表名</p>
+</blockquote>
+</li>
+<li><p>修改表结构</p>
+<blockquote>
+<p>alter table 表名 add 列名 类型(长度) 约束</p>
+</blockquote>
+<p>作用：修改表添加列</p>
+<p><img src="/images/database/db10.png" alt=""></p>
+<blockquote>
+<p>alter table 表名 modify 列名 类型(长度) 约束</p>
+</blockquote>
+<p>作用：修改表修改列的的类型长度及约束</p>
+<p><img src="/images/database/db11.png" alt=""></p>
+<p><img src="/images/database/db12.png" alt=""></p>
+<blockquote>
+<p>alter table 表名 change 旧列名 新列名 类型(长度) 约束</p>
+</blockquote>
+<p>作用：修改表修改列名</p>
+<p><img src="/images/database/db13.png" alt=""></p>
+<p><img src="/images/database/db14.png" alt=""></p>
+<blockquote>
+<p>alert table 表名 drop 列名</p>
+</blockquote>
+<p>作用：修改表删除某一列</p>
+<p><img src="/images/database/db15.png" alt=""></p>
+<blockquote>
+<p>rename table 表名 to 新表名</p>
+</blockquote>
+<p>作用：修改表名</p>
+<p><img src="/images/database/db16.png" alt=""></p>
+<p><img src="/images/database/db17.png" alt=""></p>
+<blockquote>
+<p>alter table 表名 character set 字符集</p>
+</blockquote>
+<p>作用：修改表的字符集</p>
+<p><img src="/images/database/db18.png" alt=""></p>
+<blockquote>
+<p>show table status 库名 like 表名</p>
+</blockquote>
+<p>作用：查看某一表的状态</p>
+<p><img src="/images/database/db19.png" alt=""></p>
 </li>
 </ul>
 
